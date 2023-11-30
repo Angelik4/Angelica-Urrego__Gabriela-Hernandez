@@ -22,10 +22,10 @@ const Form = () => {
     setTimeout(() => {
       setNombre('');
       setEmail('');
-    }, 3000);
+    }, 5000);
     setTimeout(() => {
       setIsValid(null)
-    }, 8000);
+    }, 5000);
   };
 
   return (
@@ -57,7 +57,7 @@ const Form = () => {
       {/* Mostrar mensajes según el estado del formulario */}
       {isValid !== null && (
         isValid ? (
-          <p style={{ textAlign: "center", color: "green", fontSize: "16px" }}>¡Formulario válido y enviado con éxito!</p>
+          <p style={{ textAlign: "center", color: "green", fontSize: "16px" }}>¡Gracias <b>{nombre}</b> el formulario es válido y se ha enviado con éxito!</p>
         ) : (
           <p style={{ textAlign: "center", color: "red", fontSize: "16px" }}>Por favor, completa los campos correctamente.</p>
         )
